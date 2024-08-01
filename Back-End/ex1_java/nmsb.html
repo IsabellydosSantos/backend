@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nome e Sobrenome</title>
+    <script>
+        function calc(){
+            const nome = document.getElementById('nome').value;
+            const nomem = document.getElementById('nomem').value;
+            const nomeu = document.getElementById('nomeu').value;
+            const nomecomp = nome + " " + nomem + " " + nomeu;
+            alert(nomecomp);
+        }
+    </script>
+</head>
+<body>
+    <br>Informe seu primeiro nome <input type="text" name="nome" id="nome"><br>
+    <br>Informe seu nome do meio <input type="text" name="nomem" id="nomem"><br>
+    <br>Informe seu último nome <input type="text" name="nomeu" id="nomeu"><br>
+    <button type="button" onclick="calc()">Concatenar</button>
+</body>
+</html>

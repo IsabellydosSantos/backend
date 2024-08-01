@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordenação de Dados</title>
+</head>
+<body>
+    <form id="formDados">
+        <label for="n1">Primeiro número: </label>
+        <input type="number" placeholder="Informe um número inteiro" id="n1" name="n1" required>
+        <br><br>
+
+        <label for="n2">Segundo número: </label>
+        <input type="number" placeholder="Informe um número inteiro" id="n2" name="n2" required>
+        <br><br>
+
+        <label for="n3">Terceiro número: </label>
+        <input type="number" placeholder="Informe um número inteiro" id="n3" name="n3" required>
+        <br><br>
+        
+        <button type="button" onclick="ordenar()">Ordenar</button>
+    </form>
+
+    <script>
+       
+        function ordenar() {
+          
+            const n1 = document.getElementById('n1').value;
+            const n2 = document.getElementById('n2').value;
+            const n3 = document.getElementById('n3').value;
+            
+
+            if(n1==n2 && n2==n3){
+                alert("Os números são iguais")
+            }
+
+            else if(n1>n2 && n2>n3){
+              ord = n3 + ", " + n2  + ", " + n1;  
+              alert(ord);
+            }
+
+            else if(n1>n3 && n3>n2){
+              ord = n2 + ", " + n3  + ", " + n1;  
+              alert(ord);
+            }
+
+            else if(n2>n1 && n1>n3){
+              ord = n3 + ", " + n1  + ", " + n2;  
+              alert(ord);
+            }
+
+            else if(n2>n3 && n3>n1){
+              ord = n1 + ", " + n3  + ", " + n2;  
+              alert(ord);
+            }
+
+            else if(n3>n1 && n1>n2){
+              ord = n2 + ", " + n1  + ", " + n3;  
+              alert(ord);
+            }
+
+            else if(n3>n2 && n2>n1){
+              ord = n1 + ", " + n2  + ", " + n3;  
+              alert(ord);
+            }
+
+            
+
+            
+            
+        }
+    </script>
+</body>
+</html>

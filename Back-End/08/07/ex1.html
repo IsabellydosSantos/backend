@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="pricingForm">
+        <label for="gasto">Informe o valor total dos gastos (R$):</label>
+        <input type="number" id="gasto" name="gasto" required><br><br>
+
+        <label for="quantity">Informe a quantidade produzida:</label>
+        <input type="number" id="quant" name="quant" required><br><br>
+
+        <label for="lucro">Informe o prospecto de lucro desejado:</label>
+        <select id="lucro" name="lucro" required>
+            <option value="1">20%</option>
+            <option value="2">50%</option>
+            <option value="3">70%</option>
+            <option value="4">100%</option>
+            <option value="5">150%</option>
+            <option value="6">200%</option>
+        </select>
+        <br><br>
+
+        <button type="button" onclick="calcularPreco()">Calcular</button>
+    </form>
+
+    
+
+    <script>
+      function calcularPreco() {
+            // Obtendo os valores dos inputs
+            var gasto = parseFloat(document.getElementById('gasto').value);
+            var quant = parseInt(document.getElementById('quant').value);
+            var lucro = parseFloat(document.getElementById('lucro').value);
+
+            // Calculando o preço de venda
+            if(lucro==1){
+                vu = gasto / quant;
+                np = '20%';
+                precit = (vu * 0.2) + vu;
+                total = precit.toFixed(2);
+                precif = "A precificação do seu produto será igual a R$ " + total + " de acordo com o prospecto de lucro de " + np;
+            }
+
+            else if(lucro==2){
+                vu = gasto / quant;
+                np = '50%';
+                precit = (vu * 0.5) + vu; 
+                total = precit.toFixed(2);
+                precif = "A precificação do seu produto será igual a R$ " + total + "de acordo com o prospecto de lucro de " + np;
+            }
+
+            else if(lucro==3){
+                vu = gasto / quant;
+                np = '70%';
+                precit = (vu * 0.7) + vu;
+                total = precit.toFixed(2);
+                precif = "A precificação do seu produto será igual a R$ " + total + "de acordo com o prospecto de lucro de " + np;
+            }
+
+            else if(lucro==4){
+                vu = gasto / quant;
+                np = '100%';
+                precit = (vu * 1) + vu; 
+                total = precit.toFixed(2);
+                precif = "A precificação do seu produto será igual a R$ " + total + "de acordo com o prospecto de lucro de " + np;
+            }
+
+            else if(lucro==5){
+                vu = gasto / quant;
+                np = '150%';
+                precit = (vu * 1.5) + vu;
+                total = precit.toFixed(2);
+                precif = "A precificação do seu produto será igual a R$ " + total + "de acordo com o prospecto de lucro de " + np;
+            }
+
+            else{
+                vu = gasto / quant;
+                np = '200%';
+                precit = (vu * 2) + vu;
+                total = precit.toFixed(2);
+                precif = "A precificação do seu produto será igual a R$ " + total + "de acordo com o prospecto de lucro de " + np;
+            }
+            
+            alert(precif);
+        }
+            
+    </script>
+    
+</body>
+</html>

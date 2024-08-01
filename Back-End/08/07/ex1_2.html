@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Precificação</title>
+</head>
+<body>
+    <form>
+     <fieldset>
+        <label for="gasto">Informe o valor total dos gastos (R$):</label>
+        <input type="number" id="gasto" name="gasto" required><br><br>
+
+        <label for="quantity">Informe a quantidade produzida:</label>
+        <input type="number" id="quant" name="quant" required><br><br>
+
+        <button type="button" onclick="calcularPreco()">Calcular</button>
+     </fieldset>
+    </form>
+
+    <script>
+        function calcularPreco() {
+        
+            var gasto = parseFloat(document.getElementById('gasto').value);
+            var quant = parseFloat(document.getElementById('quant').value);
+            var vu = gasto / quant;
+
+              
+            precitv = (vu * 0.2) + vu;
+              
+            precitc = (vu * 0.5) + vu;
+             
+            precits = (vu * 0.7) + vu;
+              
+            precite = vu * 2;
+              
+            precitz = (vu * 1.5) + vu;
+             
+            precitd = (vu * 2) + vu;
+             
+              
+              
+              
+            window.alert(`A precificação do seu produto será igual a R$ ${precitv.toLocateString('pt-br', {style: 'currency', currency:'BRL'})} de acordo com o prospecto de lucro de 20%
+            A precificação do seu produto será igual a R$ ${precitc} de acordo com o prospecto de lucro de 50%
+            A precificação do seu produto será igual a R$ ${precits} de acordo com o prospecto de lucro de 70%
+            A precificação do seu produto será igual a R$ ${precite} de acordo com o prospecto de lucro de 100%
+            A precificação do seu produto será igual a R$ ${precitz} de acordo com o prospecto de lucro de 150%
+            A precificação do seu produto será igual a R$ ${precitd} de acordo com o prospecto de lucro de 200%`);
+
+        }
+            
+    </script>
+</body>
+</html>
