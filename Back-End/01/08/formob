@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Cadastro</h1>
+    <form>
+        <label for="nome">Nome: </label>
+        <input type="text" placeholder="Informe seu nome" id="nome" name="nome" required>
+        <br><br>
+
+        <label for="sobrenome">Sobrenome: </label>
+        <input type="text" placeholder="Informe seu sobrenome" id="sobrenome" name="sobrenome" required>
+        <br><br>
+
+        <label for="email">Email: </label>
+        <input type="email" placeholder="Informe seu email" id="email" name="email" required>
+        <br><br>
+
+        <label for="endr">Endereço: </label>
+        <input type="text" placeholder="Informe seu endereço" id="endr" name="endr" required>
+        <br><br>
+
+        <label for="tel">Telefone: </label>
+        <input type="tel" placeholder="Informe seu telefone" id="tel" name="tel" required>
+        <br><br>
+
+        <label for="datan">Data de Nascimento: </label>
+        <input type="date" id="date" name="date" required>
+        <br><br>
+        
+        <label for="stcv">Estado Civil</label>
+        <select name="stcv" id="stcv" required>
+            <option value="" disabled selected>Estado Civil</option>
+            <option value="Casado">Casado</option>
+            <option value="Divorciado">Divorciado</option>
+            <option value="Solteiro">Solteiro</option>
+            <option value="Viúvo">Viúvo</option>
+            <option value="PNI">Prefiro não informar</option>
+        </select>
+        <br><br>
+
+        <label for="gen">Gênero</label>
+        <select name="gen" id="gen" required>
+            <option value="" disabled selected>Gênero</option>
+            <option value="Feminino">Feminino</option>
+            <option value="Masculino">Masculino</option>
+            <option value="Não-Binário">Não-Binário</option>
+            <option value="Gênero Fluido">Gênero Fluido</option>
+            <option value="PNI">Prefiro não informar</option>
+        </select>
+        <br><br>
+
+        <button type="submit">Enviar</button>
+    </form> 
+
+    <script>
+        alert("Enviado com sucesso!")
+    </script>
+</body>
+</html>
