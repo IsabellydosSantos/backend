@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+    <label for="n1">Insira um número</label>
+    <input type="number" name="n1" id="n1"><br><br>
+    <label for="n2">Insira um número</label>
+    <input type="number" name="n2" id="n2"><br><br>
+    <label id="resultado"></label><br><br>
+    <button onclick="somar()">Somar</button>
+    <button onclick="subtrair()">Subtrair</button>
+    <button onclick="multiplicar()">Multiplicar</button>
+    <button onclick="dividir()">Dividir</button>
+
+    <script>
+        function somar(){
+            var n1 = parseFloat(document.getElementById('n1').value)
+            var n2 = parseFloat(document.getElementById('n2').value)
+
+            soma = n1 + n2
+
+            somaf= soma.toFixed(1)
+
+            window.alert(`A soma dos dois números é igual a: ${somaf}`)
+
+            document.getElementById('resultado').innerText = somaf
+        }
+
+        function subtrair(){
+            var n1 = parseFloat(document.getElementById('n1').value)
+            var n2 = parseFloat(document.getElementById('n2').value) 
+
+            subtracao = n1 - n2
+
+            subtracaof= subtracao.toFixed(1)
+
+            window.alert(`A subtração dos dois números é igual a: ${subtracaof}`)
+
+            document.getElementById('resultado').innerText = subtracaof
+        }
+
+        function multiplicar(){
+            var n1 = parseFloat(document.getElementById('n1').value)
+            var n2 = parseFloat(document.getElementById('n2').value)
+
+            multiplicacao = n1 * n2
+
+            multiplicacaof= multiplicacao.toFixed(1)
+
+            window.alert(`A multiplicação dos dois números é igual a: ${multiplicacaof}`)
+
+            document.getElementById('resultado').innerText = multiplicacaof
+        }
+
+        function dividir(){
+            var n1 = parseFloat(document.getElementById('n1').value)
+            var n2 = parseFloat(document.getElementById('n2').value)
+
+            if (n2==0){
+                alert(`Náo é possível efetuar a divisão`)
+            }
+            else {
+                divisao = n1 / n2
+
+            divisaof= divisao.toFixed(2).replace('.',',')
+
+            window.alert(`A divisão dos dois números é igual a: ${divisaof}`)
+
+            document.getElementById('resultado').innerText = divisaof 
+            }
+        }
+    </script>
+</body>
+</html>

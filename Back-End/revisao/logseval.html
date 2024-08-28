@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validaçãp de Login e Senha</title>
+</head>
+<body>
+    <label for="usuario">Nome de Usuário: </label>
+    <input type="text" placeholder="Insira seu usuario" id="usuario" name="usuario" required>
+    <br><br>
+
+    <label for="senha">Senha: </label>
+    <input type="password" placeholder="Insira sua senha" id="senha" name="senha" required>
+    <br><br>
+    
+    <button onclick="valid()">Entrar</button>
+
+    <script>
+        function valid(){
+            var user = document.getElementById('usuario').value
+            var senha = document.getElementById('senha').value
+            if(user=='admin' & senha=='admin'){
+                alert(`Login validado com sucesso`)
+            }
+            else{
+                alert(`Usuário ou senha incorretos`)
+            }
+        }
+    </script>
+</body>
+</html>

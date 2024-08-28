@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="gasv">informe o valor da gasolina</label>
+    <input type="number" name="gasv" id="gasv">
+
+    <label for="alc">informe o valor do alcool</label>
+    <input type="number" name="alc" id="alc">
+
+    <label for="gasc">informe o consumo da gasolina</label>
+    <input type="number" name="gacs" id="gasc">
+
+    <label for="alco">informe o consumo do alcool</label>
+    <input type="number" name="alco" id="alco">
+
+    <label for="val">informe o valor que vai abastecer</label>
+    <input type="number" name="val" id="val">
+
+    <button onclick="calc()">calcular</button>
+
+    <label id="resultado"></label>
+
+    <script>
+        function calc(){
+            var gasval = parseFloat(document.getElementById('gasv').value)
+            var alcval = parseFloat(document.getElementById('alc').value)
+            var gascons = parseFloat(document.getElementById('gasc').value)
+            var alcons = parseFloat(document.getElementById('alco').value)
+            var val = parseFloat(document.getElementById('val').value)
+
+            calgas = (val / gasval) * gascons
+            calalc = (val / alcval) * alcons
+
+            calgasa = calgas.toFixed(2)
+            calalca = calalc.toFixed(2)
+
+            if(calgas>calet){
+                alert(`Abasteça com gasolina`)
+            }
+
+            else{
+                alert(`Abasteça com alcool`)
+            }
+
+            saida = `Voce perocrrera ${calgasa} km com gasolina e ${calalca} km com alcool`
+            document.getElementById('resultado').innerText = saida
+
+        }
+    </script>
+</body>
+</html>
