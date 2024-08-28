@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliar situação da nota</title>
+</head>
+<body>
+    <label for="n1">Primeira nota: </label>
+    <input type="number" placeholder="Informe a nota" id="n1" name="n1" required>
+    <br><br>
+
+    <label for="n2">Segunda nota: </label>
+    <input type="number" placeholder="Informe a nota" id="n2" name="n2" required>
+    <br><br>
+
+    <label for="n3">Terceira nota: </label>
+    <input type="number" placeholder="Informe a nota" id="n3" name="n3" required>
+    <br><br>
+    
+    <button type="button" onclick="avaliar()">Avaliar</button> 
+    <br><br>
+
+    <label id="mediaf"></label>
+</form>
+
+<script>
+    function avaliar() {
+      
+        const n1 = parseFloat(document.getElementById('n1').value);
+        const n2 = parseFloat(document.getElementById('n2').value);
+        const n3 = parseFloat(document.getElementById('n3').value);
+
+        media = (n1+n2+n3) / 3
+        mediaf = media.toFixed(2)
+
+        if(mediaf >= 7){
+            alert(`Você está aprovado. Sua média é ${mediaf.replace('.',',')}`)
+        }
+
+        else if(mediaf < 7 && mediaf >= 4){
+            notaex = 10 - mediaf
+            alert(`Você está de exame. Sua média é ${mediaf.replace('.',',')}. Você precisa de ${notaex.toFixed(2).replace('.',',')} pontos pra passar`)
+        }
+
+        else{
+            alert(`Você está reprovado. Sua média é ${mediaf.replace('.',',')}`)
+        }
+
+        document.getElementById('mediaf').innerText = mediaf.replace('.',',')
+        
+    }
+</script>
+</body>
+</html>

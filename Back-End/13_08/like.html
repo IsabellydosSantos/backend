@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylel.css">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+     <button id="gostei" onclick="like()">Curti 👍</button>
+
+     <label id="resultadol"></label><br>
+
+     <button id="desgostei" onclick="dislike()">Não curti 👎</button>
+
+     <label id="resultadod"></label><br>
+    </div>
+
+    <script>
+        var gostei = 0
+        var desgostei = 0
+       
+
+        function like() {
+          gostei = gostei + 1
+          saida = `${gostei}`
+          document.getElementById('resultadol').innerHTML = saida
+        }
+
+        function dislike() {
+          desgostei = desgostei + 1
+          saida = `${desgostei}`
+          document.getElementById('resultadod').innerHTML = saida
+        }
+    </script>
+</body>
+</html>
