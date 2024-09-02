@@ -23,79 +23,68 @@ chaveiro=15,00</p>
         </select>
         <br><br> 
 
-        <label id="resultado"></label><br>
+<label for="pagam">Insira o valor: </label>
+        <input type="text" placeholder="Insira i calor em R$" id="pagam" name="pagam" required>
+        <br><br>
+
+        
 
         <button type="button" onclick="vender()">Vender</button>
-        <button type="button" onclick="comprar()">Comprar</button>
+        
         <br>
 
 
     
 
     <script>
-        var camiseta = 0
-        var botton = 0
-        var copo = 0
-        var chaveiro = 0
-
-        function vender() {
+        
+        function comprar() {
             var saida = ''
 
             var select = document.getElementById('product').value
-            
+            var pagam = document.getElementById('pagam').value
 
             if(select == 'camiseta'){
-                camiseta = camiseta - 1
-                alert('Foi vendida 1(uma) camiseta com sucesso')
+               if(pagam == '30'){
+                alert(`pagamenti efetuado com sucesso`)
+               if(pagam < '30'){
+                alert(`a venda nao foi concluida. valores informados sao insuficiente`)
+               if(pagam > '30'){
+                troco = pagam - 30
+                alert(`pagamento efetuado com sucesso. seu troco é ${troco}`)
             }
 
             else if(select == 'botton'){
-                botton = botton - 1
-                alert('Foi vendido 1(um) botton com sucesso')
+                if(pagam == '8'){
+                alert(`pagamenti efetuado com sucesso`)
+               if(pagam < '8'){
+                alert(`a venda nao foi concluida. valores informados sao insuficiente`)
+               if(pagam > '8'){
+                troco = pagam - 8
+                alert(`pagamento efetuado com sucesso. seu troco é ${troco}`)
             }
 
             else if(select == 'copo'){
-                copo = copo - 1
-                alert('Foi vendido 1(um) copo com sucesso')
+                if(pagam == '35'){
+                alert(`pagamenti efetuado com sucesso`)
+               if(pagam < '35'){
+                alert(`a venda nao foi concluida. valores informados sao insuficiente`)
+               if(pagam > '35'){
+                troco = pagam - 35
+                alert(`pagamento efetuado com sucesso. seu troco é ${troco}`)
             }
 
-            if(select == 'chaveiro'){
-                chaveiro = chaveiro - 1
-                alert('Foi vendido 1(um) chaveiro com sucesso')
+            else if(select == 'chaveiro'){
+                if(pagam == '15'){
+                alert(`pagamenti efetuado com sucesso`)
+               if(pagam < '15'){
+                alert(`a venda nao foi concluida. valores informados sao insuficiente`)
+               if(pagam > '15'){
+                troco = pagam - 15
+                alert(`pagamento efetuado com sucesso. seu troco é ${troco}`)
             }
 
-            saida = `Camiseta: ${camiseta} Botton: ${botton} Copo: ${copo} Chaveiro: ${chaveiro}`
-            document.getElementById('resultado').innerText = saida
-        }
-
-        function armazenar() {
-            var saida = ''
-
-            var select = document.getElementById('product').value
             
-
-            if(select == 'camiseta'){
-                camiseta = camiseta + 1
-                alert('Foi armazenada 1(uma) camiseta com sucesso')
-            }
-
-            else if(select == 'botton'){
-                botton = botton + 1
-                alert('Foi armazenado 1(um) botton com sucesso')
-            }
-
-            else if(select == 'copo'){
-                copo = copo + 1
-                alert('Foi armazenado 1(um) copo com sucesso')
-            }
-
-            if(select == 'chaveiro'){
-                chaveiro = chaveiro + 1
-                alert('Foi armazenado 1(um) chaveiro com sucesso')
-            }
-
-            saida = `Camiseta: ${camiseta} Botton: ${botton} Copo: ${copo} Chaveiro: ${chaveiro}`
-            document.getElementById('resultado').innerText = saida
         }
     </script>
 </body>
