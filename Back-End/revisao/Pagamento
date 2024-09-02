@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Validacao Pagamento</title>
+</head>
+<body>
+    <h1>Validacao Pagamento</h1>
+    <h3>Selecione o produto que deseja realizar a compra</h3>
+    <p>camiseta=30,00
+botton=8,00
+copo=35,00
+chaveiro=15,00</p>
+        <label for="product">Selecione o produto</label>
+        <select name="product" id="product">
+            <option value="" disabled selected>Selecione</option>
+            <option value="camiseta">Camiseta</option>
+            <option value="botton">Botton</option>
+            <option value="copo">Copo</option>
+            <option value="chaveiro">Chaveiro</option>
+        </select>
+        <br><br> 
+
+        <label id="resultado"></label><br>
+
+        <button type="button" onclick="vender()">Vender</button>
+        <button type="button" onclick="comprar()">Comprar</button>
+        <br>
+
+
+    
+
+    <script>
+        var camiseta = 0
+        var botton = 0
+        var copo = 0
+        var chaveiro = 0
+
+        function vender() {
+            var saida = ''
+
+            var select = document.getElementById('product').value
+            
+
+            if(select == 'camiseta'){
+                camiseta = camiseta - 1
+                alert('Foi vendida 1(uma) camiseta com sucesso')
+            }
+
+            else if(select == 'botton'){
+                botton = botton - 1
+                alert('Foi vendido 1(um) botton com sucesso')
+            }
+
+            else if(select == 'copo'){
+                copo = copo - 1
+                alert('Foi vendido 1(um) copo com sucesso')
+            }
+
+            if(select == 'chaveiro'){
+                chaveiro = chaveiro - 1
+                alert('Foi vendido 1(um) chaveiro com sucesso')
+            }
+
+            saida = `Camiseta: ${camiseta} Botton: ${botton} Copo: ${copo} Chaveiro: ${chaveiro}`
+            document.getElementById('resultado').innerText = saida
+        }
+
+        function armazenar() {
+            var saida = ''
+
+            var select = document.getElementById('product').value
+            
+
+            if(select == 'camiseta'){
+                camiseta = camiseta + 1
+                alert('Foi armazenada 1(uma) camiseta com sucesso')
+            }
+
+            else if(select == 'botton'){
+                botton = botton + 1
+                alert('Foi armazenado 1(um) botton com sucesso')
+            }
+
+            else if(select == 'copo'){
+                copo = copo + 1
+                alert('Foi armazenado 1(um) copo com sucesso')
+            }
+
+            if(select == 'chaveiro'){
+                chaveiro = chaveiro + 1
+                alert('Foi armazenado 1(um) chaveiro com sucesso')
+            }
+
+            saida = `Camiseta: ${camiseta} Botton: ${botton} Copo: ${copo} Chaveiro: ${chaveiro}`
+            document.getElementById('resultado').innerText = saida
+        }
+    </script>
+</body>
+</html>
