@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>churrasco na laje</title>
+</head>
+<body>
+    <h1>churrasquinho na laje</h1>
+    <p> informe a quantidade de pessoas: <input type="number" name="pessoas"  id="pessoas"></p>
+<p> informe a quantidade de carne por pessoas: <input type="number" name="carne"  id="carne"></p>
+
+<button onclick="multiplicar()">multiplicar</button>
+
+<script>
+    function multiplicar(){
+      var pessoas = parseInt(document.getElementById('pessoas').value)
+      var carne = parseFloat(document.getElementById('carne').value)
+
+      multiplica= n1 * n2
+      alert(`a multiplicacao dos valores é: ${multiplica}`)
+      document.getElementById('onde vai aparecer').innerText = multiplica
+    }
+</script>
+    
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> média faculdade</h1>
+<p> informe o primeiro nota: <input type="number" name="n1"  id="n1" placeholder="informe o primeiro nota"></p>
+<p> informe a segunda nota: <input type="number" name="n2"  id="n2" placeholder="informe o segundo nota"></p>
+<p> informe a terceira nota: <input type="number" name="n3"  id="n3" placeholder="informe a terceira nota"></p>
+
+<button onclick="calcular()">calcular</button>
+<br>
+<span id="resultado1"></span>
+<br>
+<span id="resultado2"></span>
+</body>
+<script>
+    function calcular(){
+      var n1 = parseFloat(document.getElementById('n1').value)
+      var n2 = parseFloat(document.getElementById('n2').value)
+      var n3 = parseFloat(document.getElementById('n3').value)
+        
+      var media = (n1 + n2 + n3) / 3
+      document.getElementById('resultado1').innerText = media.toFixed(2).replace('.','.')
+
+      if (media >= 7){
+      document.getElementById('resultado2').innerText = "Você está aprovado"
+      }
+
+      else if (media < 7 && media >=4){
+        mediaex = 10 - media
+        alert(`voce está de exame final e preisará tirar uma nota superior a: ${mediaex.toFixed(2).replace('.','.')}`)      }
+      else{
+        document.getElementById('resultado2').innerText = "Você está reprovado"
+      }
+      
+        
+      }
+    </script>
+</html>

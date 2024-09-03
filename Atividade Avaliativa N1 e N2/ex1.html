@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      button{
+        background-color: rgb(119, 180, 238);
+        color: aliceblue;
+        border: transparent;
+        width: 225px;
+        height: 30px;
+      }
+    </style>
+    <title>Login e Senha</title>
+</head>
+<body>
+    <div id="logcs">
+    <label for="login">Login:</label>
+    <input type="text" name="login" id="login"><br><br>
+
+    <label for="senha">Senha:</label>
+    <input type="password" name="senha" id="senha"><br><br>
+
+    <button onclick="validar()">Entrar</button><br><br>
+    
+    <label for="alter">Alterar senha</label><br><br>
+    <label for="forgot">Esqueci a senha</label>
+    </div>
+
+    <script>
+        function validar(){
+        
+        var login = (document.getElementById('login').value)
+        var senha = (document.getElementById('senha').value)
+
+        if (login=='admin' && senha =='admin'){
+            alert(`Login efetuado com sucesso`)
+        }
+        else{
+            alert(`Usuário ou senha incorretos`)
+        }
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validação de Pagamento</title>
+</head>
+<body>
+    <p>
+        Botton R$8,00
+    </p>
+    <p>
+        Camisa R$15,00
+    </p>
+    <p>
+        Chaveiro R$5,00
+    </p>
+
+    <label for="product">Escolha o produto que deseja comprar:</label>
+    <select name="prod" id="prod">
+    <option value="1">Botton</option>
+    <option value="2">Camisa</option>
+    <option value="3">Chaveiro</option>
+    </select><br><br>
+
+    <label for="pag">Insira o pagamento</label>
+    <input type="number" name="pag" id="pag" placeholder="R$"><br><br>
+
+    <button onclick="pagar()">Pagar</button>
+
+    <script>
+        function pagar(){
+            var escolha = document.getElementById('prod').value
+            var pagam = parseFloat(document.getElementById('pag').value)
+
+            if(escolha==1 & pagam==8){
+                alert(`Venda efetuada com sucesso`)
+            }
+
+            else if(escolha==1 & pagam<8){
+                alert(`A venda não foi concluída. Os valores informados são insuficiente para concluir a venda`)
+            }
+
+            else if(escolha==1 & pagam>8){
+                troco = pagam - 8.00
+                alert(`A venda foi concluída com sucesso, seu troco é de R$${troco}`)
+            }
+
+            if(escolha==2 & pagam==15){
+                alert(`Venda efetuada com sucesso`)
+            }
+
+            else if(escolha==2 & pagam<15){
+                alert(`A venda não foi concluída. Os valores informados são insuficiente para concluir a venda`)
+            }
+
+            else if(escolha==2 & pagam>15){
+                troco = pagam - 15.00
+                alert(`A venda foi concluída com sucesso, seu troco é de R$${troco}`)
+            }
+
+            if(escolha==3 & pagam==5){
+                alert(`Venda efetuada com sucesso`)
+            }
+
+            else if(escolha==3 & pagam<5){
+                alert(`A venda não foi concluída. Os valores informados são insuficiente para concluir a venda`)
+            }
+
+            else if(escolha==3 & pagam>5){
+                troco = pagam - 5.00
+                alert(`A venda foi concluída com sucesso, seu troco é de R$${troco}`)
+            }
+        }
+    </script>
+</body>
+</html>

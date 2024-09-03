@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de gastos de viagem</title>
+</head>
+<body>
+    <label for="dist">Informe a distância do local de origem até o destino</label>
+    <input type="number" name="dist" id="dist" placeholder="Km/h"><br><br>
+
+    <label for="cons">Informe o consumo do veículo</label>
+    <input type="number" name="cons" id="cons" placeholder="Km/L"><br><br>
+
+    <label for="comb">Informe o valor do combustível</label>
+    <input type="number" name="comb" id="comb" placeholder="R$"><br><br>
+
+    <button onclick="calc()">Calcular gasto total</button>
+
+    <script>
+        function calc() {
+            var litro = parseFloat(document.getElementById('cons').value)
+            var km = parseFloat(document.getElementById('dist').value)
+            var valor = parseFloat(document.getElementById('comb').value)
+
+            litrototal = litro * km
+            valortotal = litrototal * valor
+
+            alert(`Você irá gastar no total R$${valortotal}`)
+        }
+    </script>
+</body>
+</html>

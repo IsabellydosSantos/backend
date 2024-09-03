@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo para abastecimento</title>
+</head>
+<body>
+    <label for="gasval">Informe o valor da gasolina</label>
+    <input type="number" name="gasval" id="gasval"><br><br>
+
+    <label for="etanval">Informe o valor do etanol</label>
+    <input type="number" name="etanval" id="etanval"><br><br>
+
+    <label for="gascons">Informe o consumo da gasolina</label>
+    <input type="number" name="gascons" id="gascons"><br><br>
+
+    <label for="etancons">Informe o consumo do etanol</label>
+    <input type="number" name="etancons" id="etancons"><br><br>
+
+    <label for="valor">Informe o valor a ser abastecido</label>
+    <input type="number" name="valor" id="valor"><br><br>
+
+    <button onclick="calc()">Calcular</button><br><br>
+
+    <label id="resultado"></label>
+
+    <script>
+        function calc(){
+            var valgas = parseFloat(document.getElementById('gasval').value)
+            var valet = parseFloat(document.getElementById('etanval').value)
+            var consgas = parseFloat(document.getElementById('gascons').value)
+            var conset = parseFloat(document.getElementById('etancons').value)
+            var valora = parseFloat(document.getElementById('valor').value)
+
+            calgas = (valora / valgas) * consgas
+            caletan = (valora / valet) * conset
+
+            //arredonda para duas casas após a vírgula
+            calgasa = calgas.toFixed(2)
+            caletana = caletan.toFixed(2)
+
+            if(calgas > caletan){
+                alert(`É melhor abastecer com gasolina`)
+            }
+
+            else{
+                alert(`É melhor abastecer com etanol`)
+            }
+
+            saida = `Seu veículo percorrerá ${calgasa} Km com gasolina e ${caletana} Km com etanol`
+            document.getElementById('resultado') = saida
+        }
+    </script>
+</body>
+</html>
